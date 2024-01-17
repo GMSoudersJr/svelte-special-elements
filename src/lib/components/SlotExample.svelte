@@ -5,20 +5,20 @@
 <SlotWidget />
 
 <SlotWidget>
-  <h1 slot="header">Header provided via Named Slot</h1>
-  <p slot="content">Content provided via named slot</p>
+  <h1 slot="header">Header via Named Slot</h1>
+  <p slot="content">Content via named slot</p>
 </SlotWidget>
 
 <SlotWidget>
-  <h1 slot="header">Header provided via Named Slot</h1>
-  <p slot="content">Content and Footer provided via named slot</p>
+  <h1 slot="header">Header via Named Slot</h1>
+  <p slot="content">Content and Footer via named slot</p>
   <p slot="footer">Copyright (c) 2024 Gerald Souders</p>
 </SlotWidget>
 
 <SlotWidget>
-  <h1 slot="header">Header provided via Named Slot</h1>
-  <p slot="disclaimer">Disclaimer provided via named slot</p>
-  <p slot="content">Content provided via named slot</p>
+  <h1 slot="header">Header via Named Slot</h1>
+  <p slot="disclaimer">Disclaimer via named slot</p>
+  <p slot="content">Content and Footer via named slot</p>
   <p slot="footer">Copyright (c) 2024 Gerald Souders</p>
 </SlotWidget>
 

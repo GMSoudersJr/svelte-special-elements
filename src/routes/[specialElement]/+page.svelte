@@ -7,23 +7,35 @@
   import WindowExample from "$lib/components/WindowExample.svelte";
   import DocumentExample from "$lib/components/DocumentExample.svelte";
   import BodyExample from "$lib/components/BodyExample.svelte";
+  import HeadExample from "$lib/components/HeadExample.svelte";
+  import OptionsExample from "$lib/components/OptionsExample.svelte";
+  import FragmentExample from "$lib/components/FragmentExample.svelte";
 
   interface Examples {
     [key: string]: typeof Page__SvelteComponent_;
   }
 
   const example: Examples = {
-    self: SelfExample,
     slot: SlotExample,
+    self: SelfExample,
     component: ComponentExample,
     element: ElementExample,
     window: WindowExample,
     document: DocumentExample,
     body: BodyExample,
+    head: HeadExample,
+    options: OptionsExample,
+    fragment: FragmentExample,
   };
 
   $: specialElement = $page.params.specialElement;
 </script>
+
+<svelte:head>
+  <title>
+    Svelte Special Elements &lt;{$page.params.specialElement}&gt;
+  </title>
+</svelte:head>
 <div class="background grid-container">
   <h1>{specialElement.toUpperCase()}</h1>
   <svelte:component this={example[specialElement]} />
@@ -32,6 +44,7 @@
 <style>
   .grid-container {
     display: grid;
+    max-width: 90vw;
     grid-template-rows: min-content;
     row-gap: 1rem;
     padding-top: 1rem;

@@ -1,6 +1,6 @@
 <div class="example">
   <slot name="header">
-    <h1>Widget without header provided</h1>
+    <h1>Widget Without Header</h1>
   </slot>
   {#if $$slots.disclaimer}
     <hr />

@@ -6,7 +6,7 @@
 
 {#if count > 0}
   <SlotWidget>
-    <h1 slot="header">Same Slot Widget Using Self</h1>
+    <h1 slot="header">Slot Widget Using Self</h1>
     <p slot="disclaimer">This Element calls itself</p>
     <p slot="content">counting down... {count}</p>
   </SlotWidget>
