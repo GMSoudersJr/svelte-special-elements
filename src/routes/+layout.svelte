@@ -6,7 +6,7 @@
 </script>
 
 <main>
-  <h1 class="header">Svelte Special Elements</h1>
+  <a href="/"><h1 class="header">Svelte Special Elements</h1></a>
   <NavList {navList} let:prop={navItem}>
     <a href={navItem.href}>
       <code>

@@ -36,16 +36,25 @@
     Svelte Special Elements &lt;{$page.params.specialElement}&gt;
   </title>
 </svelte:head>
-<div class="background grid-container">
-  <h1>{specialElement.toUpperCase()}</h1>
-  <svelte:component this={example[specialElement]} />
+<div class="outer grid-container">
+  <div class="inner">
+    <h1>{specialElement.toUpperCase()}</h1>
+    <svelte:component this={example[specialElement]} />
+  </div>
 </div>
 
 <style>
-  .grid-container {
-    display: grid;
+  .outer {
     max-width: 90vw;
-    grid-template-rows: min-content;
+    padding: 4px;
+    border-radius: 16px;
+    background: rgb(2,0,36);
+    background: linear-gradient(215deg, rgba(2,0,36,1) 0%, rgba(203,43,213,0.915954415954416) 26%, rgba(0,212,255,1) 100%);
+  }
+  .inner {
+    border-radius: 12px;
+    background-color: white;
+    display: grid;
     row-gap: 1rem;
     padding-top: 1rem;
     padding-bottom: 1.618rem;

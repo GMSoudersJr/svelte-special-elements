@@ -25,19 +25,23 @@
 
 <div class="key_press">
  {#if keyPressed}
-   <h1>{keyPressed}</h1>
+   <h1 class="key">{keyPressed}</h1>
  {/if}
 </div>
 
 <style>
   .key_press {
     margin: auto;
-    background-color: #F9F9A9;
-    height: 100px;
-    width: 100px;
-    border-radius: 6px;
+    background-color: rgba(0,212,255,1);
+    filter: brightness(90%);
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .key {
+    transform: scale(1.2);
   }
 </style>

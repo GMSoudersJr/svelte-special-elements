@@ -76,18 +76,20 @@
 </script>
 
 <SlotWidget>
-<label for="element" slot="header">
-  Select an HTML Element:
-  <select
-    name="element"
-    id="element"
-    bind:value={selected}
-  >
-    {#each options as option}
-      <option value={option.value}>{option.innerHtml}</option>
-    {/each}
-  </select>
-</label>
+  <svelte:fragment slot="header">
+    <label for="element">
+      Select an HTML Element:
+      <select
+        name="element"
+        id="element"
+        bind:value={selected}
+      >
+        {#each options as option}
+          <option value={option.value}>{option.innerHtml}</option>
+        {/each}
+      </select>
+    </label>
+  </svelte:fragment>
   <p slot="disclaimer">Example:</p>
   <svelte:element this={tag} slot="content">
     This is an HTML <code>{tag}</code> Element
@@ -97,6 +99,11 @@
 
 <style>
   label {
-    padding-bottom: 1rem;
+    display: grid;
+    grid-template-columns: max-content min-content;
+    align-items: baseline;
+    justify-content: center;
+    column-gap: 4px;
+    padding-bottom: 2px;
   }
 </style>

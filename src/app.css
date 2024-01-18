@@ -14,9 +14,10 @@ h1, h2, h3 {
 .example {
   width: 90%;
   margin: auto;
-  background-color: #F9F9A9;
+  background-color: rgba(0,212,255,1);
   border-radius: 12px;
   padding: 12px 15px;
+  filter: brightness(85%);
 }
 .without {
   filter: brightness(90%);

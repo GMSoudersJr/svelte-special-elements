@@ -38,16 +38,15 @@
     width: 100px;
     height: 100px;
     border-radius: 5%;
-    background-color: #FFF222;
-    transition: all 0.5s ease-out;
+    background: rgba(0,212,255,1);
+    transition: all 1s ease;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .entered {
-    background-color: #FFF;
+    transform: rotate(360deg);
     border-radius: 50%;
   }
 </style>
-
